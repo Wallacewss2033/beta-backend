@@ -1,0 +1,39 @@
+version: '3.9'
+
+services:
+  beta-server:
+    image: nginx:1.21.1
+    container_name: nginx-beta
+    ports:
+      - 80:80
+    networks:
+      - net-beta
+    volumes:
+      - ./confs/servers:/etc/nginx/conf.d/
+      - ./beta-bank:/var/www/html
+
+  beta-app:
+    build: ./beta-bank
+    container_name: beta-bank
+    networks:
+      - net-beta
+    volumes:
+      - ./beta-bank:/var/www/html
+
+  mysql-beta:
+    image: mysql:5.7
+    container_name: mysql-beta
+    volumes: 
+      - ./confs/mysql:/var/lib/mysql
+    command: --default-authentication-plugin=mysql_native_password
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: betabank
+    ports:
+      - 3306:3306
+    networks: 
+      - net-beta
+
+networks: 
+  net-beta:
+    driver: bridge
