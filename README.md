@@ -5,14 +5,22 @@
 ```
 git clone git@github.com:Wallacewss2033/beta-backend.git
 ```
-- Entre na pasta do prejeto e clone este
+- Entre na raiz do prejeto ```beta-backend``` e clone o projeto ```beta-bank```
 ```
 git clone git@github.com:Wallacewss2033/beta-bank.git
 ```
 
 ### Back-end
+- ainda na pasta raíz do projeto ```beta-backend``` rode:
+```
+docker-compose up -d --build
+```
+- entre no terminal do container do projeto ```beta-backend``` 
+ ```
+ docker exec -it beta-bank bash
+ ```
+- no terminal do container rode:
 
-- Entre na pasta do projeto 'beta-bank' e instale as dependencias
 ```
 composer install
 ```
@@ -28,17 +36,14 @@ php artisan key:generate
   
 ![image](https://github.com/Wallacewss2033/fullstack-challenge-20231205/assets/39920409/ec726dce-7762-4c68-b66c-668698afad41)
 
-- Na pasta raíz do projeto rode
-```
-docker-compose up -d --build
-```
+OBS: user e senha do mysql ambos são ```root```
 
-- entre no terminal do container do projeto ``` beta-backend ``` e Para criar o banco de dados
+- Para criar o banco de dados
 ```
 php artisan migrate
 ```
 
-- Para popular o banco na tabela de produtos
+- Para popular a tabela de accounts
 ```
 php artisan db:seed
 ```
@@ -51,12 +56,15 @@ OBS: CASO HAJA ALGUM PROBLEMA DE PERMISSÃO NO PROJETO RODE:
 
 ### DOCUMENTAÇÃO
 
-- Clone a documentação desenvolvida no insomnia
+- A documentação foi criada no ```openapi 3.0.0```
+- A documentação está no ```./documentations/doc-beta-bank.yml```
 
-    - volte para a pasta raiz e rode:
+    ### Como usar:
+    - baixe a extensão do vscode chamada 
+        ```OpenAPI (Swagger) Editor```
+    - abra o arquivo da documentação ```doc-beta-bank.yml```
+    - click no icone no canto superior direito 
 
-        ```
-        git clone git@github.com:Wallacewss2033/doc-beta-bank.git
-        
-OBS: Use no insomnia designer
+        ![Alt text](image.png)
+    - ou use o atalho (Shift+Alt+P)
     
