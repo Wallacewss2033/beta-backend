@@ -1,0 +1,78 @@
+  openapi: 3.0.0
+  info:
+    title: betaBank
+    description: Api do betaBank
+    version: 1.0.0
+    
+  servers:
+    - url: http://127.0.0.1/api
+    
+  tags:
+    - name: account
+      description: contas
+
+  paths:
+  #  Accounts
+    /accounts:
+      post:
+        tags:
+          - account
+        summary: create
+        requestBody:
+          required: true
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                   name:
+                     type: string
+                     default: 'Teste da Silva'
+
+        responses:
+          '200':
+            description: conta criada com sucesso!
+          '404':
+            description: Not Found
+          '422':
+            description: Validation exception
+        
+    /accounts/transactions:
+      post:
+        tags:
+          - account
+        summary: transaction
+        requestBody:
+          required: true
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                   sender:
+                      type: string
+                      format: uuid
+                   receiver: 
+                      type: string
+                      format: uuid
+                   value:
+                      type: number
+                      format: float
+                      default: 17.57
+                   date:
+                      type: string
+                      format: date
+                      default: "2024-03-08"
+        responses:
+          '200':
+            description: transação realizada com sucesso!
+          '400':
+            description: Bed Request
+          '401':
+            description: Forbidden
+          '404':
+            description: Not Found
+          '422':
+            description: Validation exception
+          
+           
