@@ -28,7 +28,7 @@ docker-compose up -d --build
 ```
 composer install
 ```
-- logo após rode esses comandos
+- logo após rode esses comandos ```(fora do terminal do container)```
 ```
 cp .env.example .env
 ```
@@ -42,7 +42,7 @@ php artisan key:generate
 
 OBS: user e senha do mysql ambos são ```root```
 
-- Para criar o banco de dados
+- Volte para o terminal do container. Para criar o banco de dados rode:
 ```
 php artisan migrate
 ```
@@ -54,9 +54,15 @@ php artisan db:seed
 
 OBS: CASO HAJA ALGUM PROBLEMA DE PERMISSÃO NO PROJETO RODE:
 
-- chown -R root:www-data storage
-- chmod -R 777 ./storage
-- chmod -R 775 ./storage
+```
+chown -R root:www-data storage
+```
+```
+chmod -R 777 ./storage
+```
+```
+chmod -R 775 ./storage
+```
 
 ### DOCUMENTAÇÃO
 
