@@ -1,8 +1,5 @@
 ## Instalação com docker 
 
-:smile: :thumbsup: :heart: 
-
-
  - #### CASO NÃO QUEIRA USAR DOCKER [Clique aqui](https://github.com/Wallacewss2033/beta-bank)
 
 - Clone o projeto
