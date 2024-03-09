@@ -1,4 +1,8 @@
 ## Instalação com docker 
+
+:smile: :thumbsup: :heart: 
+
+
  - #### CASO NÃO QUEIRA USAR DOCKER [Clique aqui](https://github.com/Wallacewss2033/beta-bank)
 
 - Clone o projeto
@@ -57,14 +61,18 @@ OBS: CASO HAJA ALGUM PROBLEMA DE PERMISSÃO NO PROJETO RODE:
 ### DOCUMENTAÇÃO
 
 - A documentação foi criada no ```openapi 3.0.0```
-- A documentação está no ```./documentations/doc-beta-bank.yml```
+- A documentação está em:
+
+        - 📁 beta-backend
+            - 📁 documentation
+                - 📄 doc-beta-bank.yml
+
 
     ### Como usar:
     - baixe a extensão do vscode chamada 
         ```OpenAPI (Swagger) Editor```
     - abra o arquivo da documentação ```doc-beta-bank.yml```
-    - click no icone no canto superior direito 
+    - click no icone no canto superior direito ou use o atalho (Shift+Alt+P)
 
         ![Alt text](image.png)
-    - ou use o atalho (Shift+Alt+P)
     
