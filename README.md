@@ -1,8 +1,5 @@
 ## Instalação com docker 
 
-:smile: :thumbsup: :heart: 
-
-
  - #### CASO NÃO QUEIRA USAR DOCKER [Clique aqui](https://github.com/Wallacewss2033/beta-bank)
 
 - Clone o projeto
@@ -19,7 +16,7 @@ git clone git@github.com:Wallacewss2033/beta-bank.git
 ```
 docker-compose up -d --build
 ```
-- entre no terminal do container do projeto ```beta-backend``` 
+- entre no terminal do container do projeto ```beta-bank``` 
  ```
  docker exec -it beta-bank bash
  ```
