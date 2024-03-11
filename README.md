@@ -48,6 +48,14 @@ php artisan migrate
 ```
 php artisan db:seed
 ```
+- Não esqueça de configurar o servidor extenal
+
+![image](https://github.com/Wallacewss2033/beta-backend/assets/39920409/71114ff8-fc63-48e8-a5ab-c7077bf14adb)
+
+- para rodar o comando de transações agendadas você pode testar a execução das tranfencias agendadas manualmente com o seguinte comando:
+```
+php artisan send:transactions
+```
 
 OBS: CASO HAJA ALGUM PROBLEMA DE PERMISSÃO NO PROJETO RODE:
 
